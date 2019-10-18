@@ -219,7 +219,6 @@ workflows:
                       branches:
                           ignore: master
             - setup_dx_orgs:
-                  context: trailhead-global
                   requires:
                       - install_cli
                       - lint_aura
@@ -277,7 +276,6 @@ workflows:
                   requires:
                       - install_cli
             - setup_dx_orgs:
-                  context: trailhead-global
                   requires:
                       - lint_aura
             - deploy_source:
