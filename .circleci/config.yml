@@ -261,24 +261,24 @@ workflows:
                               - .*prerelease.*
         jobs:
             - setup_tooling
-            - prettier_verify:
-                  requires:
-                      - setup_tooling
-            - lint_lwc:
-                  requires:
-                      - prettier_verify
+            # - prettier_verify:
+            #       requires:
+            #           - setup_tooling
+            # - lint_lwc:
+            #       requires:
+            #          - prettier_verify
             - unit_test_lwc:
                   requires:
                       - lint_lwc
             - install_cli:
                   requires:
                       - lint_lwc
-            - lint_aura:
-                  requires:
-                      - install_cli
+            # - lint_aura:
+            #       requires:
+            #           - install_cli
             - setup_dx_orgs:
-                  requires:
-                      - lint_aura
+            #       requires:
+            #           - lint_aura
             - deploy_source:
                   requires:
                       - setup_dx_orgs
