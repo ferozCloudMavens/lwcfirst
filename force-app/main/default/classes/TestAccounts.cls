@@ -1,8 +1,8 @@
 @isTest
 public with sharing class TestAccounts {
     @TestSetup
-    static void makeData(){
-        insert new Account(name='dummy data');
+    static void makeData() {
+        insert new Account(name = 'dummy data');
     }
     @isTest
     static void oneAccount() {

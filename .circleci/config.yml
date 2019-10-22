@@ -266,7 +266,7 @@ workflows:
                       - setup_tooling
             - lint_lwc:
                   requires:
-                     - prettier_verify
+                      - prettier_verify
             - unit_test_lwc:
                   requires:
                       - lint_lwc
